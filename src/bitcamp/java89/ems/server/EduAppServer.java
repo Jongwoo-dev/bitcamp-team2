@@ -9,6 +9,11 @@ import bitcamp.java89.ems.server.controller.ContactDeleteController;
 import bitcamp.java89.ems.server.controller.ContactListController;
 import bitcamp.java89.ems.server.controller.ContactUpdateController;
 import bitcamp.java89.ems.server.controller.ContactViewController;
+import bitcamp.java89.ems.server.controller.LectureAddController;
+import bitcamp.java89.ems.server.controller.LectureDeleteController;
+import bitcamp.java89.ems.server.controller.LectureListController;
+import bitcamp.java89.ems.server.controller.LectureUpdateController;
+import bitcamp.java89.ems.server.controller.LectureViewController;
 import bitcamp.java89.ems.server.controller.TeacherAddController;
 import bitcamp.java89.ems.server.controller.TeacherDeleteController;
 import bitcamp.java89.ems.server.controller.TeacherListController;
@@ -44,6 +49,12 @@ public class EduAppServer {
     commandMap.put("textBook/view", new TextBookViewController());
     commandMap.put("textBook/delete", new TextBookDeleteController());
     commandMap.put("textBook/update", new TextBookUpdateController());
+    
+    commandMap.put("lecture/add", new LectureAddController());
+    commandMap.put("lecture/list", new LectureListController());
+    commandMap.put("lecture/view", new LectureViewController());
+    commandMap.put("lecture/delete", new LectureDeleteController());
+    commandMap.put("lecture/update", new LectureUpdateController());
   }
 
   private void service() throws IOException {
